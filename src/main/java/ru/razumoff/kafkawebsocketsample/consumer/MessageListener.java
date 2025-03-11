@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import ru.razumoff.kafkawebsocketsample.modal.Message;
 
 import static ru.razumoff.kafkawebsocketsample.Constants.Kafka.GROUP_ID;
-import static ru.razumoff.kafkawebsocketsample.Constants.Kafka.KAFKA_TOPIC;
+import static ru.razumoff.kafkawebsocketsample.Constants.Kafka.KAFKA_TOPIC_CHAT;
 
 @Component
 @RequiredArgsConstructor
@@ -16,7 +16,7 @@ public class MessageListener {
     private final SimpMessagingTemplate template;
 
     @KafkaListener(
-            topics = KAFKA_TOPIC,
+            topics = KAFKA_TOPIC_CHAT,
             groupId = GROUP_ID
     )
     public void listen(Message message) {
