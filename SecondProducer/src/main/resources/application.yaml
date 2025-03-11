@@ -3,6 +3,5 @@ server:
 spring:
   application:
     name: SecondProducer
-
-  front:
-    host: http://localhost:5173
+  kafka:
+    bootstrap-servers: localhost:9092
