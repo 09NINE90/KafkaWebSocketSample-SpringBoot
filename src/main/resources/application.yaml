@@ -2,4 +2,6 @@ server:
   port: 8085
 spring:
   application:
-    name: KafkaWebSocketSample
+    name: Kafka WebSocket Sample
+  front:
+    host: http://localhost:5173

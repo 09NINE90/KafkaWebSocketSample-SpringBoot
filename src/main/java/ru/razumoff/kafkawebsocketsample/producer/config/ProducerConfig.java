@@ -13,6 +13,8 @@ import ru.razumoff.kafkawebsocketsample.modal.Message;
 import java.util.HashMap;
 import java.util.Map;
 
+import static ru.razumoff.kafkawebsocketsample.Constants.Kafka.KAFKA_BROKER;
+
 @EnableKafka
 @Configuration
 public class ProducerConfig {
@@ -25,7 +27,7 @@ public class ProducerConfig {
     @Bean
     public Map<String, Object> producerConfigurations() {
         Map<String, Object> configurations = new HashMap<>();
-        configurations.put(org.apache.kafka.clients.producer.ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        configurations.put(org.apache.kafka.clients.producer.ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER);
         configurations.put(org.apache.kafka.clients.producer.ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configurations.put(org.apache.kafka.clients.producer.ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         return configurations;

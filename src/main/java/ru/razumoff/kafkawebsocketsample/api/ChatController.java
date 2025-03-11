@@ -13,7 +13,7 @@ import ru.razumoff.kafkawebsocketsample.modal.Message;
 import java.time.LocalDateTime;
 import java.util.concurrent.ExecutionException;
 
-import static ru.razumoff.kafkawebsocketsample.Constants.Kafka.KAFKA_TOPIC;
+import static ru.razumoff.kafkawebsocketsample.Constants.Kafka.KAFKA_TOPIC_CHAT;
 
 @RestController
 @RequiredArgsConstructor
@@ -25,7 +25,7 @@ public class ChatController {
     public void sendMessage(@RequestBody Message message) {
         message.setTimestamp(LocalDateTime.now().toString());
         try {
-            kafkaTemplate.send(KAFKA_TOPIC, message).get();
+            kafkaTemplate.send(KAFKA_TOPIC_CHAT, message).get();
         } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }
