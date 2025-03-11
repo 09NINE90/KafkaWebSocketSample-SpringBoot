@@ -1,4 +1,4 @@
-package ru.razumoff.kafkawebsocketsample.modal;
+package ru.razumoff.secondproducer.modal;
 
 import lombok.Data;
 

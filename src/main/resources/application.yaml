@@ -3,5 +3,7 @@ server:
 spring:
   application:
     name: Kafka WebSocket Sample
+  kafka:
+    bootstrap-servers: localhost:9092
   front:
     host: http://localhost:5173
