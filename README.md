@@ -1,7 +1,7 @@
 # KafkaWebSocketSample
 
 ---
-### [UI websocket](https://github.com/09NINE90/KafkaWebSocketSampleFront)
+### [UI React](https://github.com/09NINE90/KafkaWebSocketSampleFront)
 ---
 ### Start zookeeper
 ~~~
