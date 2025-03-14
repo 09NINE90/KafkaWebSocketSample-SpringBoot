@@ -1,15 +1,18 @@
 # KafkaWebSocketSample
 
+---
 ### [UI websocket](https://github.com/09NINE90/KafkaWebSocketSampleFront)
-
+---
 ### Start zookeeper
 ~~~
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties.
 ~~~
+---
 ### Start kafka server
 ~~~
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 ~~~
+---
 ### Create topic
 ~~~
 .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic KafkaChat
